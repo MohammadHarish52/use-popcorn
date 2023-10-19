@@ -60,6 +60,8 @@ export default function App() {
         <Input />
         <Numresults movies={movies} />
       </Navbar>
+      {/* alternative 
+       <Navbar element={<Numresults movies={movies} />}/>*/}
       <Main>
         <Box>
           <MovieList movies={movies} />
