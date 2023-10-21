@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import ReactDOM from "react-dom/client";
 import StarRating from "./StarRating";
 // import "./index.css";
@@ -8,7 +9,7 @@ function Test() {
   const [movieRating, setMovieRating] = useState(0);
   return (
     <div>
-      <StarRating color="blue"  />
+      <StarRating color="blue" maxRating={10} onSetRating={setMovieRating} />
       <p>This Movie was rated {movieRating} stars</p>
     </div>
   );
@@ -21,7 +22,7 @@ root.render(
       maxRating={5}
       messages={["terrible", "bad", "okay", "goood", "amazing"]}
     />
-    <StarRating maxRating={10} size={36} className="test" defaultRating={3} />
+    {/* <StarRating maxRating={10} size={36} className="test" defaultRating={3} /> */}
     <Test />
   </React.StrictMode>
 );
